@@ -6,12 +6,21 @@ let hero = {
     };
  
     function upgradeSkill(skill, points) {
-        skill = hero.strength;
-        hero.strength = skill + points
-        
+        if (skill === "strength") {
+        currentSkill = hero.strength;
+        hero = currentSkill + points
+        }
+        if (skill === "agility") {
+            currentSkill = hero.agility;
+            hero = currentSkill + points
+        }
+        if (skill === "endurance") {
+            currentSkill = hero.endurance;
+            hero = currentSkill + points
+        }
     }
  
     // Пример вызова функции
     upgradeSkill("strength", 5); // Увеличиваем силу на 5
-    console.log( "hero strength =" + " " + hero.strength)
+    console.log( "hero =" + " " + hero)
     
